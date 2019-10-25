@@ -26,7 +26,10 @@ def eq4623d1(L1, W1):
 
     E = 10.0 + 5.0 * math.sqrt(L1 * W1)
 
-    return E
+    text = (f"E = 10.0 + 5.0 * math.sqrt({L1} * {W1})\n"
+            f"E = {10.0 + 5.0 * math.sqrt(L1 * W1)}")
+
+    return E, text
 
 def eq4623d2(L1, W1, W, NL):
     """Equivalent strip width for two lanes.
@@ -52,5 +55,8 @@ def eq4623d2(L1, W1, W, NL):
     """
 
     E = min(84.0 + 1.44*math.sqrt(L1*W1), (12.0*W)/NL)
+
+    text = (f"E = min(10.0 + 5.0 * math.sqrt({L1} * {W1}), (12.0*{W})/{NL})\n"
+            f"E = {min(10.0 + 5.0 * math.sqrt(L1 * W1), (12.0*W)/NL}")
 
     return E
